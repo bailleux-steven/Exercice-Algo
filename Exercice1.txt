@@ -9,16 +9,16 @@ ___________________________________________
 
 1.Créer variable annee_naissance 
 2.Demander annee_naissance
-3.annee_naissance <-- annee_naissance entrée
+3.annee_naissance <-- année de naissance entrée
 4.Afficher annee_naissance
 
 5.Créer variable annee_actuelle
 6.Demander annee_actuelle
-7.annee_actuelle <-- annee_actuelle entrée
+7.annee_actuelle <-- année actuelle entrée
 8.Afficher annee_actuelle
 
 9.Créer variable age 
-10.age <-- annee_naissance - annee_actuelle
+10.age <-- annee_actuelle - annee_naissance
 11.Afficher résultat age
 12.Détruire variable annee_naissance
 13.Détruire variable annee_actuelle
