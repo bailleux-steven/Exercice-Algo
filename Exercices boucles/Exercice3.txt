@@ -1,0 +1,11 @@
+Exercice 3 : Simuler un nombre d’essais de connexion
+Consigne :
+L’utilisateur a 3 essais maximum
+Afficher le numéro de l’essai
+Arrêter après le dernier essai
+
+___________________________________________________________
+1.POUR essaie de 1 à 3
+2.Afficher "Essaie numéro" + essaie
+3.FIN POUR
+4.AFFICHER "Nombre maximum atteint"

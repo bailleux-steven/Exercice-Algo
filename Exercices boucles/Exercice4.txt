@@ -1,0 +1,16 @@
+Exercice 4 : Table de multiplication
+Consigne :
+Demander un nombre
+Afficher sa table de multiplication de 1 à 10
+
+_________________________________________________
+
+1.Créer une variable nombre
+2.Demander nombre
+3.nombre <-- nombre entrée
+4.POUR i allant de 1 à 10 
+5.resultat <-- nombre x i 
+6. ?
+7.FIN POUR
+
+

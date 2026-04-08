@@ -1,0 +1,18 @@
+Exercice 1 : Afficher les nombres pairs
+
+Consigne :
+Afficher les nombres pairs entre 1 et 20
+
+Indice : effecuez des recherches sur l'opérateur mathématique qui s'appelle Modulo
+
+____________________________________________________________________________________
+
+1.POUR i allant 1 à 20
+2.SI i mod 2 = 0 ALORS
+3.AFFICHER i
+4.FIN SI 
+5.FIN POUR
+
+
+
+

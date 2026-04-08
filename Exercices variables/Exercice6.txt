@@ -1,0 +1,38 @@
+Exercice 6 : Afficher un message selon une note
+Ecrire un algorithme en pseudo-code pour :
+
+1.Entrée : note
+2.SI la note est supérieure ou égale à 10
+→ afficher « Admis »
+3.SINON
+→ afficher « Refusé »
+
+Variante :
+Ajouter une mention (Très bien, Bien, Passable)
+__________________________________________________
+
+1.Créer variable Note
+2.Demander Note
+3.note <-- Note entrée
+4.Si Note >= 10 ALORS
+5.Afficher "Admis"
+6.SINON Afficher "Refusé"
+7.Détruire variable Note
+ 
+___________________________________________________
+
+Variante
+
+1.Créer variable Note
+2.Demander Note
+3.note <-- Note entrée
+4.SI Note >= 16 ALORS
+5.Afficher "Très bien"
+6.SINON SI Note >= 14 ALORS
+7.Afficher "Bien"
+8.SINON SI Note >= 12 ALORS
+9.Afficher "Passable"
+10.SINON SI Note >= 10 Alors
+11.Afficher "Admis"
+12.SINON Afficher "Refusé"
+13.Détruire variable Note
