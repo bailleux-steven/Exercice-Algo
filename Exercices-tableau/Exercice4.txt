@@ -1,0 +1,16 @@
+Exercice 4 : Compter le nombre d’éléments
+
+Consigne :
+Créer un tableau
+Compter le nombre d’éléments
+Afficher le total
+_____________________________________________
+1.Créer la variable tableau
+2.Demander la variable tableau
+3.tableau <- ["3","6","10","12",16"]
+4.Créer la variable total
+6.total <- i de 0 +1
+4.POUR i de 0 à longeur(nombres_elements) -1 
+5.SI nombre_elements [i]
+
+AFFICHER total

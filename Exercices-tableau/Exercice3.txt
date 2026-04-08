@@ -1,0 +1,23 @@
+Exercice 3 : Trouver le plus grand et le plus petit nombre
+Consigne :
+Créer un tableau de nombres
+Trouver la valeur maximale
+Trouver la valeur minimale
+___________________________________________________________
+1.Créer la variable nombres
+2.Demander la variable nombres
+3.nombres <- ["3","6","10","12",16"]
+4.Créer variable vmax
+6.vmax <- i de 0 de nombres
+7.Créer variable vmin
+9.vmin <- i de 0 de nombres
+10.POUR i de 0 à longeur(nombres) - 1
+11.SI nombres[i] > vmax
+12.vmax <- nombres[i]
+13.FIN SI
+14.SI nombres [i] < vmin
+15.vmin <- nombres [i]
+16.FIN SI
+17.FIN POUR
+18.AFFICHER vmax
+19.AFFICHER vmin

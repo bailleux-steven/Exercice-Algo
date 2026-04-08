@@ -1,0 +1,12 @@
+Exercice 1 : Afficher tous les éléments d’un tableau
+Consigne :
+Créer un tableau de valeurs
+Afficher chaque élément un par un
+_______________________________________________________
+1.Créer la variable tableau
+2.Demander la variable tableau
+3.tableau <- ["Steven","Bob","Paul"]
+4.POUR i de 0 à longueur (tableau) -1
+5.AFFICHER tableau
+6.FIN POUR
+

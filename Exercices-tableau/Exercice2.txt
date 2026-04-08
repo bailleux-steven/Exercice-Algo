@@ -1,0 +1,20 @@
+Exercice 2 : Calculer la moyenne d’une liste de notes
+Consigne :
+Créer un tableau de notes
+Calculer la somme des notes
+Calculer la moyenne
+Afficher le résultat
+_______________________________________________________
+1.Créer variable notes
+2.Demander variable notes
+3.notes <-["3","6","10","12",16"]
+4.Créer variable somme
+5.Demander variable somme
+6.somme <-0
+7.POUR i de 0 à longeur(notes) - 1
+8.somme <- somme + notes [i]
+9. FIN POUR
+10.Créer variable moyenne
+11.Demander variable moyenne
+12.moyenne <- somme/longueur(notes)
+13.AFFICHER moyenne
