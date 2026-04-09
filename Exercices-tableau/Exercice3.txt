@@ -11,7 +11,7 @@ ___________________________________________________________
 6.vmax <- i de 0 de nombres
 7.Créer variable vmin
 9.vmin <- i de 0 de nombres
-10.POUR i de 0 à longeur(nombres) - 1
+10.POUR i de 1 à longeur(nombres) - 1
 11.SI nombres[i] > vmax
 12.vmax <- nombres[i]
 13.FIN SI

@@ -1,0 +1,115 @@
+EXERCICE 1 : Créer une fonction de calcul de TVA
+
+1. Créer une fonction 'calculerTVA(prixHT,tauxTVA)' qui :
+-Prend en paramètre un prix HT et un taux de TVA
+-Calcule le montant de la TVA
+-Retourne ce montant 
+
+2.Ensuite, ecrire un algoritme principal qui :
+-Demande un prix HT
+-Demande un taux de TVA
+-Appelle la fonction
+-Affiche le prix TTC(prix HT+TVA)
+__________________________________________________________
+
+1.SOUS-ALGORITME calculerTVA(prixHT,tauxTVA)
+2.TVA <- prixHT*tauxTVA
+3.RETOURNER TVA
+4.FIN
+
+5.ALGORITME
+6.Demander prixHT
+7.prixHTA <- prixHT entré
+8.Demander TauxTVA
+9.TauxTVAB <- TauxTVA entré
+10.résultat <- calculerTCVA (prixHTA,TauxTVAB)
+11.prixTTC <- prixHTA+résultat
+12.AFFICHER 
+
+
+EXERCICE 2 : Composer plusieurs fonctions
+
+1.Créer deux fonctions :
+-'calculerMoyenne(note1,note2,note3)'qui retourne la moyenne de 3 notes
+-'attribuerMention(moyenne)'qui retourne une mention selon la moyenne :
+
++ moyenne >= 16 :"Très bien"
++ moyenne >= 14 :"Bien"
++ moyenne >= 12 :"Assez bien"
++ moyenne >= 10 :"Passable"
++ moyenne < 10 :"Insuffisant"
+
+2. Ensuite, écrire un algoritme principal qui :
+-Demande 3 notes
+-Calcule la moyenne avec la première fonction
+-Obtient la mention avec la deuxième fonction
+-Affiche moyenne et mention
+______________________________________________________
+
+1.SOUS-ALGORITME calculerMoyenne(note1,note2,note3)
+2.résultat <- (note1 + note2 + note3)/3
+3.RETOURNER résultat
+4.FIN
+
+5.SOUS-ALGORITME attribuerMention(moyenne)
+8.SI moyenne <=20 ET moyenne <=16 
+9.	RETOURNER "Très bien"
+10.SINON SI moyenne <=16 ET moyenne <=14
+11.	RETOURNER "Bien"
+12.SINON SI moyenne <=14 ET moyenne <=12
+13.	RETOURNER "Asser Bien"
+14.SINON SI moyenne <=12 ET moyenne <=10
+15.	RETOURNER "Passable"
+16.SINON SI moyenne < 10
+17.	RETOURNER "Insuffisant"
+18.FIN SI
+20.FIN
+
+21.ALGORITME
+22.Demander note1
+23.note1A <- note1 entré
+24.Demander note2
+25.note2A <- note2 entré
+26.Demander note3
+27.note3A <- note3 entré
+28.moyenne <- calculerMoyenne(note1A,note2A,note3A)
+29.mention <- attribuerMention(moyenne)
+30.AFFICHER moyenne
+31.AFFICHER mention
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

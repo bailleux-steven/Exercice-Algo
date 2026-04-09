@@ -13,8 +13,9 @@ _______________________________________________________
 6.somme <-0
 7.POUR i de 0 à longeur(notes) - 1
 8.somme <- somme + notes [i]
-9. FIN POUR
-10.Créer variable moyenne
-11.Demander variable moyenne
-12.moyenne <- somme/longueur(notes)
-13.AFFICHER moyenne
+9.FIN POUR
+10.AFFICHER somme
+11.Créer variable moyenne
+12.Demander variable moyenne
+13.moyenne <- somme/longueur(notes)
+14.AFFICHER moyenne
