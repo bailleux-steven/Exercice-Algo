@@ -1,0 +1,114 @@
+EXERCICE 1 : Algorithme volontairemenr faux à corriger
+
+Algoritme donné
+
+1.age <- 16
+2.SI age > 18
+3.	AFFICHER "Majeur"
+4.SINON
+5.	AFFICHER "Mineur"
+6.FIN SI
+
+CORRECTION :
+2.Si age >= 18
+
+__________________________________________________________
+EXERCICE 2 : Identifier les erreurs logiques
+
+
+Algoritme donné
+
+1.notes <- [10.12.14]
+2.somme <- 0
+
+3.POUR chaque note dans notes 
+4.	somme <- note
+5.FIN POUR
+
+6.moyenne <- somme /3
+7.AFFICHER moyenne
+
+CORRECTION :
+2.somme <- somme + note
+
+2.somme <- notes[0]
+3.Pour i de 1 à taille de notes -1
+4. somme <- somme + note[i]
+
+7.moyenne <- somme / taille de notes
+
+
+_________________________________________________
+EXERCICE 3 : Compléter un algoritme incomplet
+
+Algoritme donné
+
+1.note <-8
+
+2.SI note >= 10
+3.	AFFICHER "Admis"
+4.FIN SI
+
+CORRECTION :
+4.SINON
+5.AFFICHER "Refusé"
+
+_____________________________________________________
+EXERCICE 4 : Gérer un cas limite
+
+Algoritme donnée
+
+1.notes <- []
+2.somme <- 0
+
+3.POUR chaque note dans notes
+	somme <- somme + note
+4.FIN POUR
+
+5.moyenne <- somme / nombre d'éléments de notes
+6.AFFICHER moyenne
+
+CORRECTION :
+6.SI somme <= 0
+7.AFFICHER "Calcul impossible"
+8.SINON AFFICHER moyenne
+9.FIN SI
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
