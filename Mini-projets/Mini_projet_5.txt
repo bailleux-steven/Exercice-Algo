@@ -1,0 +1,58 @@
+Objectifs en français :
+
+1.Il faut saisir les notes dans une variable 
+2.Il faut pouvoir les additionner entre elles puis les diviser par le nombre de notes
+3.Il faut pouvoir comparer les notes entre elles pour trouver la plus grande et la plus petite
+4.Il faut déterminer les notes au-dessus de 10 
+5. Il faut pouvoir compter le nombre de notes au-dessus de 10
+6. Il faut afficher un message d’erreur s’il n’y a pas de notes saisies dans la variable « notes »
+
+Traduction en pseudo-code :
+
+FONCTION calculerMoyenne(notes)
+Somme <- 0
+POUR i de 0 A longeur(notes) -1
+    somme <- somme + notes[i]
+FIN POUR
+RETOURNER somme / longeur(notes)
+FIN FONCTION
+
+FONCTION trouverMax(notes)
+Max <- notes [0]
+POUR i de 1 A longeur de notes -1
+    SI notes [i] > Max
+        Max <- notes [i]
+    FIN SI
+FIN POUR
+RETOURNER Max
+FIN FONCTION
+
+FONCTION trouverMin(notes)
+Min <- notes [0]
+POUR i de 1 A longeur de notes -1
+    SI notes [i] < Min
+        Min <- notes [i]
+    FIN SI
+FIN POUR
+RETOURNER Min
+FIN FONCTION
+
+FONCTION compterAdmis(notes)
+Compteur <- 0
+POUR i de 0 A longeur de notes -1
+    SI notes[i] >= 10 ALORS
+        Compteur <- Compteur +1
+    FIN SI 
+RETOURNER Compteur
+FIN FONCTION
+
+notes <- [3,15,10,22,9]
+
+SI longeur (notes) = 0 ALORS
+    AFFICHER "Aucune note renseignée"
+SINON
+    AFFICHER "Moyenne : " +calculerMoyenne(notes)
+    AFFICHER "Meilleur note :" +trouverMax(notes)
+    AFFICHER "Moins bonne note :" +trouverMin(notes)
+    AFFICHER "Nombre d'élèves admis :" +compterAdmis(notes)
+FIN SI

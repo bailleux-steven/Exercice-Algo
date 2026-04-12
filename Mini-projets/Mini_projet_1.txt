@@ -1,0 +1,39 @@
+Objectifs en français :
+1.Faire choisir à l'ordinateur un nombre entre 1 et 100
+2.Faire choisir un nombre au joueur
+3.Vérifier que le nombre ordi est égal au nombre du joueur
+4.Définir le nombre de tentatives max 
+5.Compter le nombre de tentatives
+6.Empécher le joueur de choisir un nombre en dehors de 1 à 100
+
+Traduction en pseudo-code :
+
+nombreSecret <- aléatoire (1,100)
+nombreChoisi <- 0
+maxTentatives <- 10
+compteurTentatives <- 0
+
+TANT QUE nombreChoisi ≠ nombreSecret 
+ET QUE compteurTentatives < maxTentatives FAIRE
+
+    DEMANDER nombreChoisi
+
+    SI nombreChoisi < 1 OU nombreChoisi > 100 ALORS
+        AFFICHER "Nombre incorrect ! "
+    SINON
+        compteurTentatives <- compteurTentatives +1 
+        SI nombreChoisi < nombreSecret ALORS
+            AFFICHER "C'est plus grand"
+        SINON SI nombreChoisi > nombreSecret ALORS
+            AFFICHER "C'est plus petit"
+        SINON 
+            AFFICHER "GAGNÉ !"
+        FIN SI
+    FIN SI
+FIN TANT QUE
+
+SI nombreChoisi = nombreSecret ALORS
+    AFFICHER "BRAVO, vous avez trouvé en "+compteurTentatives+" essais !"
+SINON
+    AFFICHER "PERDU, le nombre était : "+nombreSecret
+FIN SI

@@ -1,0 +1,57 @@
+Objectifs en français :
+
+1.Il faut pouvoir saisir un identifiant et un MDP
+2.Il faut vérifier la correspondance de l'identifiant et du MDP
+3.Il faut compter le nombre de tentatives
+4.Il faut arréter la saisi après 3 tentatives puis bloquer
+5.Il faut afficher des messages adaptés
+
+Traduction en pseudo-code :
+
+FONCTION verifierConnexion(identifiantSaisi, motDePasseSaisi)
+    SI identifiantSaisi = identifiantEnregistré 
+        ET motDePasseSaisi = MotdepasseEnregistré ALORS
+        RETOURNER VRAI
+    SINON
+        RETOURNER FAUX
+    FIN SI
+FIN FONCTION
+
+identifiantEnregistré <- "Supercodeur"
+MotdepasseEnregistré <- "Apprendreàcoder"
+identifiantSaisi <- ""
+Motdepassesaisi <- ""
+maxTentatives <- 3
+compteurTentatives <- 0
+
+TANT QUE (identifiantSaisi ≠ identifiantEnregistré
+OU Motdepassesaisi ≠ MotdepasseEnregistré)
+ET QUE compteurTentatives < maxTentatives FAIRE
+
+    DEMANDER identifiantSaisi
+    DEMANDER Motdepassesaisi
+
+    SI verifierConnexion(identifiantSaisi,motDePasseSaisi) = FAUX ALORS
+        AFFICHER "Identifiant ou mot de passe incorrect"
+    FIN SI
+    compteurTentatives <- compteurTentatives +1 
+    
+FIN TANT QUE 
+
+SI identifiantSaisi = identifiantEnregistré 
+ET Motdepassesaisi = MotdepasseEnregistré ALORS
+        AFFICHER "Bienvenue " +identifiantSaisi
+SINON 
+    AFFICHER "COMPTE BLOQUÉ"
+FIN SI
+
+
+
+
+
+
+
+
+
+
+
