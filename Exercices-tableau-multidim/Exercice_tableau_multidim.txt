@@ -44,7 +44,7 @@ POUR i de 0 A notesClasse1 -1
 FIN POUR
  moyenneClasse1 / longeur(notesClasse1)
 AFFICHER "La moyenne de la classe 1 est :"+moyenneClasse1
-
+________________________________________
 
 ALGORITMHE CONSIGNE 2
 ________________________________________
@@ -70,3 +70,35 @@ POUR i de 0 A (tableauNotesClasses) -1
 FIN POUR
 somme <- somme / taille de tableauNotesClasses 
 AFFICHER "La moyenne globale est " +somme
+________________________________________
+
+
+EXERCICE 3 : CHERCHER DANS UNE GRILLE
+Créer un tableau 4x4 de nombres.
+Chercher si un nombre spécifique existe dans la grille
+Si oui, afficher sa position (ligne, colone)
+Si non, afficher "Nombre non trouvé"
+
+ALGORITMHE
+__________________________________
+tableau <- [
+    [1,2,3,4]
+    [5,6,7,8]
+    [9,10,11,12]
+    [13,14,15,16]
+]
+nombreCherche <- 7
+trouvé <- FAUX
+
+POUR i de 0 A 3 FAIRE
+    POUR j de 0 A 3 FAIRE
+        SI tableau [i][j] = nombreCherche ALORS
+            trouvé <- VRAI
+            AFFICHER "Nombre trouvé en ligne ",i, " et en colonne", j
+        FIN SI    
+    FIN POUR
+FIN POUR
+SI trouvé = FAUX ALORS
+    AFFICHER "Nombre non trouvé"
+FIN SI
+__________________________________
