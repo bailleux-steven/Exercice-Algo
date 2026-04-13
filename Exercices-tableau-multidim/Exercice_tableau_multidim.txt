@@ -1,0 +1,72 @@
+EXERCICE 1 : AFFICHER UNE GRILLE DE MORPION
+Créer un tableau 3x3 représentant une grille de morpion.
+Initialiser la grille avec des espaces vides ("")
+Placer quelques coups (X et O)
+Afficher la grille de manière lisible
+
+ALGORITMHE
+__________________________________
+morpion <- [
+    ["","",""]
+    ["","",""]
+    ["","",""]
+] 
+morpionJoue <- morpion <- [
+    [X,"",X]
+    ["",0,""]
+    [X,"",X]
+] 
+POUR i de 0 à Tab-1
+    POUR j de 0 à Tab [i]-1
+        AFFICHER Tab[i][j]
+    FIN POUR
+FIN POUR
+____________________________________
+
+
+EXERCICE 2 : NOTES DE PLUSIEURS CLASSES
+Créer un tableau représentant les notes de 3 classes avec 5 élèves chacune
+Calculer la moyenne d'une classe spécifique
+Calculer la moyenne généreale de toutes les classes
+
+ALGORITMHE CONSIGNE 1
+________________________________________
+tableauNotesClasses <- [
+    [2,14,9,8,10] // Classe 1
+    [20,3,1,4,16] // Classe 2
+    [18,12,6,5,9] // Classe 3
+]  
+notesClasse1 <- : tableauNotesClasses[0]
+moyenneClasse1 <- 0
+
+POUR i de 0 A notesClasse1 -1
+    moyenneClasse1 <- moyenneClasse1 + notesClasse1[i]
+FIN POUR
+ moyenneClasse1 / longeur(notesClasse1)
+AFFICHER "La moyenne de la classe 1 est :"+moyenneClasse1
+
+
+ALGORITMHE CONSIGNE 2
+________________________________________
+tableauNotesClasses <- [
+    [2,14,9,8,10] // Classe 1
+    [20,3,1,4,16] // Classe 2
+    [18,12,6,5,9] // Classe 3
+]  
+FONCTION calculerMoyenneduneClasse (tableau)
+moyenneClasse1 <- 0
+
+POUR i de 0 A tableau -1
+    moyenneClasse1 <- moyenneClasse1 + tableau[i]
+FIN POUR
+ RETOURNER moyenneClasse1 / longeur(tableau)
+FIN FONCTION
+
+// Programme Principal
+somme <- 0
+POUR i de 0 A (tableauNotesClasses) -1
+    moyenneclasse1 <- calculerMoyenneduneClasse (tableauNotesClasses [i])
+    somme <- somme + moyenneClasse1
+FIN POUR
+somme <- somme / taille de tableauNotesClasses 
+AFFICHER "La moyenne globale est " +somme

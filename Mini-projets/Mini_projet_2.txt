@@ -1,0 +1,69 @@
+DONNÉES A GÉRER :
+- Prix TTC unitaire des articles
+- Quantité des articles <- Entrée utilisateur
+- Prix total
+- Remise de 10%
+- Minimum d'achat pour la remise
+
+SORTIE ET CAS LIMITES :
+- Cas d'erreur : Panier Vide
+    - Message d'Erreur : ERREUR - impossible de valider un panier Vide
+- Cas de la Remise : Prix Total est supérieur ou égal au minimim d'achat
+    - Message d'information : Vous atteigner le minimum d'achat pour avoir une remise de 10%
+- Cas de la Validation acceptée : Validation a été effectuée avec succès
+    - Message d'information : Votre Panier a été validé. Passage à l'étape de Paiement
+- Cas d'erreur : Quantité entrée n'est pas un nombre entier supérieur ou égal à 0
+    - Message d'Erreur : ERREUR - La quantité entrée doit être un nombre supérieur ou égale à 0
+
+
+OBJECTIFS EN LANGUAGES NATURELS :
+DEMANDER les produis souhaités et leur quantité
+Panier <- liste des produis avec leur pris et leur quantité
+VERIFIER si l'utilisateur Valie le panier
+VERIFIER si le panier est Vide
+SI le panier est vide, on affiche le message d'erreur
+CALCULER le prix total
+VERIFIER si le prix total atteint le prix minimim pour remise, Si c'est le cas, on applique la remise et on affiche le Message
+Valider le panier : on affiche le message de Validation
+
+
+VARIABLES : 
+panier : liste des produits
+tauxRemise : la remise à appliquer
+minMontant : le montant minimim pour appliquer la remise
+prixTotal <- 0
+
+
+ALGORITME
+__________________________________________
+minMontant <- un prix plancher
+tauxRemise <- taux de remise
+
+DEMANDER les produis souhaités et leur quantité
+    POUR chaque produits
+        SI quantité n'est pas supérieur ou égal à 0 ALORS
+            AFFICHER "ERREUR - La quantité entrée doit être un nombre supérieur ou égal à 0"
+            BLOQUER la Validation du Panier
+        SINON
+            ACTIVER la Validation du Panier
+        FIN SI
+    FIN POUR
+
+
+
+
+POUR chaque produits
+    Somme <- prixTotal+prixProduit*quanite
+    FIN POUR
+    SI prixTotal >= minMontant ALORS
+        AFFICHER "Vous atteigner le minimim d'achat pour avoir une remise de "+tauxRemise"%"
+        prixTotal <- prixTotal*(100-tauxRemise)/100
+        FIN SI
+        VALIDER le Panier
+        AFFICHER "Votre panier a été validé.Passage à l'étape de Paiement"
+        FIN SI
+        FIN SI
+
+
+
+___________________________________________

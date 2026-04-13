@@ -40,7 +40,7 @@ FIN TANT QUE
 
 SI identifiantSaisi = identifiantEnregistré 
 ET Motdepassesaisi = MotdepasseEnregistré ALORS
-        AFFICHER "Bienvenue " +identifiantSaisi
+        AFFICHER "Bienvenue " +identifiantSaisi "!"
 SINON 
     AFFICHER "COMPTE BLOQUÉ"
 FIN SI

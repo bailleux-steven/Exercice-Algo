@@ -19,7 +19,7 @@ ET QUE compteurTentatives < maxTentatives FAIRE
     DEMANDER nombreChoisi
 
     SI nombreChoisi < 1 OU nombreChoisi > 100 ALORS
-        AFFICHER "Nombre incorrect ! "
+        AFFICHER "Nombre incorrect !"
     SINON
         compteurTentatives <- compteurTentatives +1 
         SI nombreChoisi < nombreSecret ALORS
