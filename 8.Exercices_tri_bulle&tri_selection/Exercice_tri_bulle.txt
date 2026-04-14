@@ -1,0 +1,153 @@
+EXERCICE : TRI A BULLE
+
+EXERCICE 1 : TRI A BULLES SUR LE PETIT BULLE
+1.Soit le tableau : [5,1,4,2,8]
+2.Tracer chaque passage complet
+3.Indiquer tous les échanges effectués
+
+FONCTION triABulles (tableau)
+n <- longueur (tableau)
+    POUR i de 0 à n - 2
+        POUR j de 0 à n -2 -i
+            SI tableau [j] > tableau [j+1]
+
+                temp <- tableau [j]
+                tableau [j] <- tableau [j+1]
+                tableau [j+1] <- temp
+            FIN SI
+        FIN POUR    
+    FIN POUR
+FIN FONCTION
+
+tableau <- [5,1,4,2,8]
+
+// TRACAGE
+
+// Boucle 1 de i
+Pour i = 0
+Pour j = 0
+[5,1,4,2,8]
+ ↨           Comparer 5 et 1 -> échanger Pour j = 0
+[1,5,4,2,8]
+   ↨         Comparer 5 et 4 -> échanger Pour j = 1 
+[1,4,5,2,8]
+     ↨       Comparer 5 et 2 -> échanger Pour j = 2
+[1,4,2,5,8]
+       ↨     Comparer 5 et 8 -> OK (déja en place) Pour j = 3
+[1,4,2,5,8]
+
+// Boucle 2 de i
+Pour i = 1
+Pour j = 0
+
+[1,4,2,5,8]
+             Comparer 1 et 4 -> OK Pour j = 0
+[1,4,2,5,8]
+   ↨         Comparer 4 et 2 -> échanger Pour j = 1
+[1,2,4,5,8]
+     ↨       Comparer 4 et 5 -> OK Pour j = 2
+[1,2,4,5,8]
+
+// Boucle 3 de i
+Pour i = 2
+Pour j = 0
+
+[1,2,4,5,8]
+ ↨           Comparer 1 et 2 -> OK Pour j = 0
+[1,2,4,5,8]
+   ↨         Comparer 2 et 4 -> OK Pour j = 1
+[1,2,4,5,8]
+
+// Boucle 4 de i
+Pour i = 3
+Pour j = 0
+
+[1,2,4,5,8]
+   ↨         Comparer 1 et 2 -> Ok Pour j = 0
+[1,2,4,5,8]
+
+La boucle s'arrète à [1,2,4,5,8]
+
+
+EXERCICE 2 : TRI PAR SÉLECTION GUIDÉ
+Soi le tableau : [29,10,14,37,13,25]
+1.Appliquer l'algoritme du tri par Sélection
+2.A chaque passage, identifier le minimum trouvé
+3.Indiquer l'échange effectué
+4.Tracer l'état du tableau après chaque passage
+
+FONCTION triParSelection(tableau)
+    n <- longueur(tableau)
+
+    POUR i de 0 à n-2
+        // Trouver l'index du minimum dans le reste du tableau
+         indexMin <-i 
+
+        POUR j de i +1 à n - 1
+            SI tableau [j] < tableau [indexMin]
+                indexMin <- j
+            FIN SI
+        FIN POUR
+
+        // Echanger l'élément minimum avec l'élément en position de i
+        SI indexMin ≠ i
+            temp <- tableau [i]
+            tableau [i] <- tableau [indexMin]
+            tableau [indexMin] <- temp
+        FIN SI
+    FIN POUR
+FIN FONCTION
+
+
+TRACAGE DE L'ALGORITME
+
+tableau <- [29,10,14,37,13,25]
+i = 0
+indexmin = 0 de (valeur 29)
+// PASSAGE 1
+j=1 : 29 > 10 -> indexmin = 1
+j=2 : 10 < 14 -> indexmin = 1 
+j=3 : 10 < 37 -> indexmin = 1
+j=4 : 10 < 13 -> indexMin = 1
+j=5 : 10 < 25 -> indexMin = 1 
+minimum = 10 (index 1)
+Echanger tableau [0] et tableau [1]
+
+tableau <- [10,29,14,37,13,25]
+i = 1
+indexMin = 1 de (valeur 29)
+// PASSAGE 2
+j=1 : 29 > 14 -> indexMin = 2
+j=2 : 14 < 37 -> indexMin = 2
+j=3 : 14 > 13 -> indexMin = 4
+j=4 : 13 < 25 -> indexMin = 4
+minimum = 13 (index 4)
+Echanger tableau [1] et tableau [4]
+
+tableau <- [10,13,14,37,29,25]
+i = 2
+indexMin = 2 de (valeur 14)
+// PASSAGE 3
+j=1 : 14 < 37 -> indexMin = 2
+j=2 : 14 < 29 -> indexMin = 2
+j=3 : 14 < 29 -> indexMin = 2
+minimum = 14 (index 2) (déja en place)
+Pas d'échange
+
+tableau <- [10,13,14,37,29,25]
+i = 3
+indexMin = 3 de (valeur 37)
+j=1 : 37 > 29 -> indexMin = 4
+j= 2 : 29 > 25 -> indexMin = 5
+minimum = 25 (index 5)
+Echanger tableau [3] et tableau [5]
+
+tableau <- [10,13,14,25,29,37]
+i = 4
+indexMin = 4 (de valeur 29)
+j=1 : 29 < 37 -> indexMin 4
+minimum = 29 (index 4) (déja en place)
+Pas d'échange
+
+Tableau trié 
+Afficher "Le tableau à bien été trié :" +tableau
