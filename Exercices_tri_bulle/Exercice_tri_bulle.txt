@@ -1,0 +1,69 @@
+EXERCICE : TRI A BULLE
+
+EXERCICE 1 : TRI A BULLES SUR LE PETIT BULLE
+1.Soit le tableau : [5,1,4,2,8]
+2.Tracer chaque passage complet
+3.Indiquer tous les échanges effectués
+
+FONCTION triABulles (tableau)
+n <- longueur (tableau)
+    POUR i de 0 à n - 2
+        POUR j de 0 à n -2 -i
+            SI tableau [j] > tableau [j+1]
+
+                temp <- tableau [j]
+                tableau [j] <- tableau [j+1]
+                tableau [j+1] <- temp
+            FIN SI
+        FIN POUR    
+    FIN POUR
+FIN FONCTION
+
+tableau <- [5,1,4,2,8]
+
+// TRACAGE
+
+// Boucle 1 de i
+Pour i = 0
+Pour j = 0
+[5,1,4,2,8]
+ ↨           Comparer 5 et 1 -> échanger Pour j = 0
+[1,5,4,2,8]
+   ↨         Comparer 5 et 4 -> échanger Pour j = 1 
+[1,4,5,2,8]
+     ↨       Comparer 5 et 2 -> échanger Pour j = 2
+[1,4,2,5,8]
+       ↨     Comparer 5 et 8 -> OK (déja en place) Pour j = 3
+[1,4,2,5,8]
+
+// Boucle 2 de i
+Pour i = 1
+Pour j = 0
+
+[1,4,2,5,8]
+             Comparer 1 et 4 -> OK Pour j = 0
+[1,4,2,5,8]
+   ↨         Comparer 4 et 2 -> échanger Pour j = 1
+[1,2,4,5,8]
+     ↨       Comparer 4 et 5 -> OK Pour j = 2
+[1,2,4,5,8]
+
+// Boucle 3 de i
+Pour i = 2
+Pour j = 0
+
+[1,2,4,5,8]
+ ↨           Comparer 1 et 2 -> OK Pour j = 0
+[1,2,4,5,8]
+   ↨         Comparer 2 et 4 -> OK Pour j = 1
+[1,2,4,5,8]
+
+// Boucle 4 de i
+Pour i = 3
+Pour j = 0
+
+[1,2,4,5,8]
+   ↨         Comparer 1 et 2 -> Ok Pour j = 0
+[1,2,4,5,8]
+
+La boucle s'arrète à [1,2,4,5,8]

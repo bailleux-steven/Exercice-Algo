@@ -65,8 +65,8 @@ FIN FONCTION
 // Programme Principal
 somme <- 0
 POUR i de 0 A (tableauNotesClasses) -1
-    moyenneclasse1 <- calculerMoyenneduneClasse (tableauNotesClasses [i])
-    somme <- somme + moyenneClasse1
+    moyenneclasses <- calculerMoyenneduneClasse (tableauNotesClasses [i])
+    somme <- somme + moyenneClasses
 FIN POUR
 somme <- somme / taille de tableauNotesClasses 
 AFFICHER "La moyenne globale est " +somme
