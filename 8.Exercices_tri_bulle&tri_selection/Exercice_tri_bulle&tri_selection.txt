@@ -1,4 +1,4 @@
-EXERCICE : TRI A BULLE
+/// EXERCICE : TRI A BULLE ///
 
 EXERCICE 1 : TRI A BULLES SUR LE PETIT BULLE
 1.Soit le tableau : [5,1,4,2,8]
@@ -9,7 +9,7 @@ FONCTION triABulles (tableau)
 n <- longueur (tableau)
     POUR i de 0 à n - 2
         POUR j de 0 à n -2 -i
-            SI tableau [j] > tableau [j+1]
+            SI tableau [j] > tableau [j+1] ALORS
 
                 temp <- tableau [j]
                 tableau [j] <- tableau [j+1]
@@ -21,8 +21,7 @@ FIN FONCTION
 
 tableau <- [5,1,4,2,8]
 
-// TRACAGE
-
+// TRAÇAGE DE L'ALGORITHME
 // Boucle 1 de i
 Pour i = 0
 Pour j = 0
@@ -67,6 +66,9 @@ Pour j = 0
 [1,2,4,5,8]
 
 La boucle s'arrète à [1,2,4,5,8]
+// FIN TRAÇAGE DE L'ALGORITHME
+______________________________________________________
+
 
 
 EXERCICE 2 : TRI PAR SÉLECTION GUIDÉ
@@ -76,6 +78,8 @@ Soi le tableau : [29,10,14,37,13,25]
 3.Indiquer l'échange effectué
 4.Tracer l'état du tableau après chaque passage
 
+ALGORITHME
+______________________________________________________
 FONCTION triParSelection(tableau)
     n <- longueur(tableau)
 
@@ -98,9 +102,7 @@ FONCTION triParSelection(tableau)
     FIN POUR
 FIN FONCTION
 
-
-TRACAGE DE L'ALGORITME
-
+// TRAÇAGE DE L'ALGORITHME
 tableau <- [29,10,14,37,13,25]
 i = 0
 indexmin = 0 de (valeur 29)
@@ -150,4 +152,63 @@ minimum = 29 (index 4) (déja en place)
 Pas d'échange
 
 Tableau trié 
+
+// FIN TRAÇAGE DE L'ALGORITHME
 Afficher "Le tableau à bien été trié :" +tableau
+______________________________________________________
+
+
+
+EXERICE 3 : TRIER PUIS CHERCHER
+Soit le tableau : [45,12,89,23,67,34,5,78]
+1.Trier ce tableau en utilisant le tri à bulles OU le tri par sélection (au choix)
+2.Une fois trié, utiliser la recherche dichotomique pour trouver le nombre 67
+3.Tracer l'exécution de la recherche dichotomique
+
+ALGORITHME EXO 3.1
+______________________________________________________
+// CHOIX DU TRI PAR SÉLECTION
+
+FONCTION triParSelection (tableau)
+    n <- longeur(tableau)
+
+    POUR i de 0 à n-2
+    indexMin <- i
+        POUR j de i+1 à n-1 
+            SI tableau [j] < tableau [indexMin] ALORS
+                indexMin <- j
+            FIN SI
+        FIN POUR
+
+        SI indexMin ≠ i 
+            temp <- tableau[i]
+            tableau[i] <- tableau [indexMin]
+            tableau [indexMin] <- temp
+        FIN SI
+    FIN POUR
+FIN FONCTION
+
+// PROGRAMME PRINCIPAL
+tableau <- [45,12,89,23,67,34,5,78]
+triParSelection (tableau)
+AFFICHER "Voici le tableau trié" +tableau
+
+Voici le tableau trié [5,12,23,34,45,67,78,89]
+
+// TRAÇAGE DE LA RECHERCHE DICHOTOMIQUE
+tableauTrie = [5,12,23,34,45,67,78,89]
+
+//Passage 1 
+indexDebut = 0
+indexfin = 7
+milieu = 3
+comparer tableauTrie [3] (34) < (67)
+Chercher à droite
+
+//Pasage 2
+indexDebut = 4
+indexfin = 7
+milieu = (4+7)/2 = 11/2 = 5
+comparer tableauTrie [5] (67) à (67)
+Nombre trouvé
+______________________________________________________
