@@ -72,7 +72,7 @@ FONCTION rechercheDichotomique(tableau, element)
     fin <- longueur (tableau) -1
 
     TANT QUE debut <= fin
-        milieu <- (debut + fin)/2
+        milieu <- Arrondir(debut + fin)/2
         SI tableau[milieu] = element ALORS
             RETOURNER milieu
         SINON SI tableau[milieu] <- element ALORS

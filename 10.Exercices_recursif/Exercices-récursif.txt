@@ -1,0 +1,62 @@
+EXERCICE 1 : SOMME RÉCURSIVE
+Écrire une fonction récursive somme(n) qui calcule la somme de tous les nombre de 1 à n.
+Exemple : somme (5) = 5 + 4 + 3 +2 + 1 = 15
+Questions :
+1.Identifier le cas de base
+2.Identifier le cas récursif
+3.Écrire l'algoritme complet
+4.Tracer l'exécution pour n=4
+
+ALGORITHME
+_________________________________________________________________
+FONCTION somme(n)
+    SI n <= 0 ALORS // Cas de base
+    RETROUNER 0
+    SINON
+    AFFICHER n
+        RETOURNER n + somme(n-1)  // Cas récursif
+    FIN SI 
+FIN FONCTION
+
+//PROGRAMME PRINCIPALE
+somme(4)
+
+// TRAÇAGE ALGORITHME
+somme(4) -> affiche 4 -> appelle somme(3)
+somme(3) -> affiche 3 -> appelle somme(2)
+somme(2) -> affiche 2 -> appelle somme(1)
+somme(1) -> affiche 1 -> appelle somme(0)
+somme(0) -> RETOURNER 0
+_________________________________________________________________
+
+
+
+EXERCICE 2 : PUISSANCE RÉCURSIVE
+Écrire une fonction récursive puissance(x,n) qui calcule x^n
+Exemple : puissance(2,4) = 2^4 = 2 x 2 x 2 x 2 = 16
+Questions :
+1.Quel est le cas de base ? (rappel : x0^=1)
+2.Quelle est la relation récursive ? (x^n=x*x^(n-1))
+3.Écrire l'algoritme complet
+4.Tracer l'exécution pour puissance(2,4)
+
+ALGORITHME
+_________________________________________________________________
+FONCTION puissance(x,n)
+    SI n = 0 ALORS // Cas de base
+        RETOURNER 1
+    SINON
+        RETOURNER x * x^(n-1) // Cas récursif
+    FIN SI
+FIN FONCTION
+
+//PROGRAMME PRINCIPALE
+puissance(2,4)
+
+// TRAÇAGE ALGORITHME
+résultat <- puissance(2,4) -> 4 x puissance (2,3)[8] ->  2 x 2 x 2 x 2 = 16
+résultat <- puissance(2,3) -> 3 x puissance (2,2)[4] -> 2 x 2 x 2 = 8 
+résultat <- puissance(2,2) -> 2 x puissance (2,1)[1] -> 2 x 2 = 4
+résultat <- puissance(2,1) -> 1 x puissance (2,0)[1] -> 2 x 1 = 2
+résultat <- puissance(2,0) -> RETOURNER 1
+_________________________________________________________________
